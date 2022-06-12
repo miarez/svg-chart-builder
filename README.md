@@ -10,3 +10,6 @@ chart.build();
 
 
 ```
+
+
+![image](https://user-images.githubusercontent.com/38563483/173249873-67cf834e-f9f3-46f1-a2e1-ff3d72926bde.png)
