@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <title>ChartBuilder 1.3</title>
+
+        <script src="chartBuilder-1.3/styling/Gradient.js"></script>
+        <script src="chartBuilder-1.3/styling/Theme.js"></script>
+
+        <script src="chartBuilder-1.3/components/Axis.js"></script>
+        <script src="chartBuilder-1.3/components/XAxis.js"></script>
+        <script src="chartBuilder-1.3/components/YAxis.js"></script>
+        <script src="chartBuilder-1.3/components/Series.js"></script>
+
+        <script src="chartBuilder-1.3/root/Chart.js"></script>
+        <script src="chartBuilder-1.3/root/XYChart.js"></script>
+
+        <script src="chartBuilder-1.3/charts/MultiTimeSeries.js"></script>
+
+
+        <style>
+
+            #chart_div
+            {
+                width: 95vw;
+                height: 95vh;
+                /*border: 1px solid grey;*/
+                box-sizing: border-box;
+            }
+
+        </style>
+
+    <body>
+        <div id="chart_div"></div>
+
+        <script>
+
+            function cs(a)
+            {
+                console.log(a);
+            }
+
+            let data = [{"date":"2022-05-01","clicks":1999024,"revenue":350395,"cost":174551},{"date":"2022-05-02","clicks":2720801,"revenue":450629,"cost":222315},{"date":"2022-05-03","clicks":2755563,"revenue":451365,"cost":215989},{"date":"2022-05-04","clicks":2705115,"revenue":443722,"cost":218292},{"date":"2022-05-05","clicks":2574308,"revenue":419414,"cost":209247},{"date":"2022-05-06","clicks":2184851,"revenue":372436,"cost":188197},{"date":"2022-05-07","clicks":1781416,"revenue":323111,"cost":161751},{"date":"2022-05-08","clicks":1873976,"revenue":355591,"cost":178046},{"date":"2022-05-09","clicks":2780222,"revenue":464371,"cost":230913},{"date":"2022-05-10","clicks":2664471,"revenue":441943,"cost":219472},{"date":"2022-05-11","clicks":2624208,"revenue":434443,"cost":215337},{"date":"2022-05-12","clicks":2564859,"revenue":415655,"cost":209640},{"date":"2022-05-13","clicks":2247448,"revenue":373566,"cost":190362},{"date":"2022-05-14","clicks":1815685,"revenue":314509,"cost":160327},{"date":"2022-05-15","clicks":1995871,"revenue":360610,"cost":181410},{"date":"2022-05-16","clicks":2875693,"revenue":453145,"cost":230444},{"date":"2022-05-17","clicks":2810267,"revenue":458197,"cost":228267},{"date":"2022-05-18","clicks":2724072,"revenue":449765,"cost":225468},{"date":"2022-05-19","clicks":2562048,"revenue":419936,"cost":206767},{"date":"2022-05-20","clicks":2300125,"revenue":376307,"cost":187095},{"date":"2022-05-21","clicks":1895801,"revenue":328625,"cost":162317},{"date":"2022-05-22","clicks":2076681,"revenue":368740,"cost":180896},{"date":"2022-05-23","clicks":2868332,"revenue":465382,"cost":232728},{"date":"2022-05-24","clicks":2744251,"revenue":443666,"cost":221821},{"date":"2022-05-25","clicks":2792168,"revenue":449098,"cost":227612},{"date":"2022-05-26","clicks":2637020,"revenue":422242,"cost":213675},{"date":"2022-05-27","clicks":2352638,"revenue":376258,"cost":191818},{"date":"2022-05-28","clicks":1907497,"revenue":313903,"cost":155732},{"date":"2022-05-29","clicks":2090126,"revenue":333746,"cost":168181},{"date":"2022-05-30","clicks":2952616,"revenue":393468,"cost":203236},{"date":"2022-05-31","clicks":3047773,"revenue":413097,"cost":217984},{"date":"2022-06-01","clicks":2878689,"revenue":455280,"cost":227148},{"date":"2022-06-02","clicks":2726658,"revenue":433764,"cost":210825},{"date":"2022-06-03","clicks":2406003,"revenue":388640,"cost":193057},{"date":"2022-06-04","clicks":1960438,"revenue":331548,"cost":165441},{"date":"2022-06-05","clicks":2139905,"revenue":377337,"cost":190613},{"date":"2022-06-06","clicks":2956799,"revenue":480856,"cost":245223},{"date":"2022-06-07","clicks":2991907,"revenue":489424,"cost":240962},{"date":"2022-06-08","clicks":3012812,"revenue":473367,"cost":242498},{"date":"2022-06-09","clicks":2782682,"revenue":440440,"cost":223595},{"date":"2022-06-10","clicks":2397590,"revenue":387957,"cost":201728},{"date":"2022-06-11","clicks":1930287,"revenue":328760,"cost":168641},{"date":"2022-06-12","clicks":1360905,"revenue":223431,"cost":112037}];
+
+            let instructionConfig = [["date", ["clicks", "revenue", "cost"]]];
+
+            let chart = new MultiTimeSeries(data, "chart_div", instructionConfig);
+            chart.build();
+
+
+        </script>
+
+
+    </body>
+
+
+
